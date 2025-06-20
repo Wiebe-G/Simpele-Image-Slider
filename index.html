@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <div class="nummertext">1 / 4</div>
+            <img class="foto" src="./images/big browser.png" alt="">
+            <div class="text">Test</div>
+        </div>
+        <div class="slides fade">
+            <div class="nummertext">2 / 4</div>
+            <img class="foto" src="./images/den helder.png">
+            <div class="text">Test</div>
+        </div>
+        <div class="slides fade">
+            <div class="nummertext">3 / 4</div>
+            <img class="foto" src="./images/inshallah bug.png" alt="">
+            <div class="text">Test</div>
+        </div>
+        <div class="slides fade">
+            <div class="nummertext">4 / 4</div>
+            <img class="foto" src="./images/pride month.png" alt="">
+            <div class="text">Test</div>
+        </div>
+        <a class="vorige" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="volgende" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div id="puntjes">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
