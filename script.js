@@ -45,15 +45,13 @@ gebruik setInterval() om automatisch te wisselen, en mouseenter en mouseleave om
 update 21/06/2025: het gaat nu automatisch verder, alleen nog met mouseleave en zo
 
 - betere animates
-css 
+css
 */
 
 function test() {
-    let index = slideIndex++;
-    showSlides(slideIndex);
+    let index = slideIndex += 1;
+    showSlides(index);
 }
-
-// const test2 = setInterval(test, 1000);
 
 document.body.addEventListener('mouseenter', function (e) {
     console.log(e);
