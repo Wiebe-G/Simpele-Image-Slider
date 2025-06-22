@@ -18,6 +18,7 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName('slides');
     let dots = document.getElementsByClassName('dot');
+
     // als n groter is dan aantal slides, 
     // zet slideIndex weer op 1, en laat eerste zien
     if (n > slides.length) {
@@ -41,7 +42,20 @@ function showSlides(n) {
 todo:
 - automatisch afspelen
 gebruik setInterval() om automatisch te wisselen, en mouseenter en mouseleave om te pauzeren
+update 21/06/2025: het gaat nu automatisch verder, alleen nog met mouseleave en zo
 
 - betere animates
 css 
 */
+
+function test() {
+    let index = slideIndex++;
+    showSlides(slideIndex);
+}
+
+// const test2 = setInterval(test, 1000);
+
+document.body.addEventListener('mouseenter', function (e) {
+    console.log(e);
+    setInterval(test, 5000)
+});
