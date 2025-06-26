@@ -1,6 +1,22 @@
+const dotContainer = document.getElementById('puntjes');
+
+function addDots() {
+    let slides = document.getElementsByClassName('slides');
+    for (let i = 0; i < slides.length; i++) {
+        let dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.onclick = function () {
+            currentSlide(i + 1);
+        };
+        dotContainer.appendChild(dot);
+    }
+};
+addDots();
+
 let slideIndex = 1;
 // slide laten zien op index 1, dus de eerste
 showSlides(slideIndex);
+
 
 // volgende / vorige
 // als je op volgende klikt, gaat die omhoog, anders omlaag
